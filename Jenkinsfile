@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    stages {
     stage('Preparation: Clean') {
         when {
           anyOf {
@@ -13,4 +14,5 @@ pipeline {
           echo "******* ${WORKSPACE}"
         }
       }
+    }
 }
